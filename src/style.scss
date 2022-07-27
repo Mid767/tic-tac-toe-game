@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: #FC7307;
+    font-family: 'Indie Flower', cursive;
+    font-size: 25px;
+
+    .startingScreen {
+        text-align: center;
+        width: 100%;
+        
+        h1 {
+            color: #D4E4F7;
+    }
+
+    .options button {
+        width: 100px;
+        height: 60px;
+        font-size: 40px;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        font-family: 'Indie Flower', cursive;
+        outline: black;
+    }
+    .options button:active {
+        box-shadow: inset 1px 2px 2px 1px rgb(208, 208, 208);
+    }
+    .option1 {
+        margin-right: 20px;
+    }
+    .option2 {
+        margin-left: 20px;
+    }
+}
+
+
+    .game {
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        margin: auto;
+        background-color: #D4E4F7;
+        gap: 5px;
+        transition: 0.3s;
+        display: none;
+
+        .game-item {
+            background-color: #FC7307;
+            height: 100px;
+            color: #D4E4F7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        
+    }
+}
+
+// x and o
+.X {
+    width: 90px;
+    height: 90px;
+    display: none;
+    opacity: 0;
+    transition: 0.3s;
+
+    .X-firstline{
+        height: 90px;
+        background-color: #D4E4F7;
+        width: 7px;
+        margin: auto;
+        position: relative;
+        transform: rotate(-45deg);
+    }
+    
+    .X-secondline {
+        height: 90px;
+        background-color: #D4E4F7;
+        width: 7px;
+        margin: auto;
+        position: relative;
+        bottom: 100%;
+        transform: rotate(45deg);
+    }
+}
+
+.O {
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    background-color: #D4E4F7;
+    position: relative;
+    display: none;
+    opacity: 0;
+    transition: 0.3s;
+    
+    .O-inner {
+        width: 73px;
+        height: 73px;
+        border-radius: 50%;
+        background-color: #FC7307;
+        position: relative;
+        left: 6px;
+        top: 6px;
+    }
+}
+// making x and o appear
+.XO__show {
+    display: block;
+}
+
+.endScreen {
+    width: 100%;
+    text-align: center;
+    display: none;
+    position: relative;
+    .endScreen-message {
+        font-size: 50px;
+        color: #D4E4F7;
+        transition: 0.3s;
+        opacity: 0;
+    }
+    .playAgain {
+        width: 200px;
+        height: 60px;
+        font-size: 25px;
+        font-weight: bold;
+        border-radius: 10px;
+        font-family: 'Indie Flower', cursive;
+        cursor: pointer;
+        opacity: 0;
+        transition: 0.3s;
+    }
+    .playAgain:active {
+        box-shadow: inset 2px 2px 3px 1px gray;
+    }
+}
